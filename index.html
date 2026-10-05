@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPAN 315 · Semana 7 · Guía</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="SPAN 315 · Introducción a la Traducción · Guía de la Semana 7 (online): pasivas e impersonales, estructuras -ING y verbos modales.">
+<style>
+:root{
+  --navy:#1e2c59; --navy-dk:#141d3d; --ice:#e9eef9; --soft:#f5f7fc; --line:#d3ddf0;
+  --accent:#d9743a; --accent-dk:#b85c28; --peach:#fdeee5; --muted:#5b6b8c;
+  --bg:#ffffff; --text:#1d2433; --card:#ffffff; --code:#eef2fb;
+  --ok:#1f7a4d; --ok-bg:#e6f4ec; --bad:#b3261e; --bad-bg:#fdecea;
+  --serif:Cambria,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:Calibri,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --navy:#9fb4f0; --navy-dk:#0f1630; --ice:#1a2347; --soft:#161d38; --line:#2d3963;
+    --accent:#f08a4b; --accent-dk:#f2a06c; --peach:#2c2118; --muted:#a3b0d4;
+    --bg:#0d1226; --text:#e6eaf7; --card:#131a35; --code:#1a2347;
+    --ok:#6fd3a0; --ok-bg:#12301f; --bad:#ff9a92; --bad-bg:#3a1714;
+  }
+}
+:root[data-theme="dark"]{
+  --navy:#9fb4f0; --navy-dk:#0f1630; --ice:#1a2347; --soft:#161d38; --line:#2d3963;
+  --accent:#f08a4b; --accent-dk:#f2a06c; --peach:#2c2118; --muted:#a3b0d4;
+  --bg:#0d1226; --text:#e6eaf7; --card:#131a35; --code:#1a2347;
+  --ok:#6fd3a0; --ok-bg:#12301f; --bad:#ff9a92; --bad-bg:#3a1714;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:var(--accent-dk)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:50}
+
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(135deg,#1e2c59 0%,#141d3d 100%);color:#fff;padding:44px 24px 36px}
+.hero-in{max-width:1180px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#f7b58a;margin-bottom:10px}
+.hero h1{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.12;margin:0 0 14px;font-weight:700}
+.hero .sub{font-size:1.12rem;max-width:760px;margin:0 0 14px;color:#dbe3fa}
+.hero .when{font-size:.95rem;color:#aebbe0;margin:0}
+.hero .intro{margin:22px 0 0;max-width:760px;background:rgba(255,255,255,.1);border-left:4px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;color:#f1f4ff}
+
+/* ---------- layout ---------- */
+.layout{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:270px minmax(0,1fr);gap:40px;padding:0 24px 80px}
+nav.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;padding:26px 4px 24px 0;font-size:.93rem}
+nav.side .label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 10px}
+nav.side ul{list-style:none;margin:0;padding:0}
+nav.side li>a{display:block;padding:6px 10px;border-radius:8px;color:var(--text);text-decoration:none;border-left:3px solid transparent;line-height:1.3}
+nav.side li>a:hover{background:var(--ice)}
+nav.side li.on>a{background:var(--ice);border-left-color:var(--accent);font-weight:700;color:var(--navy)}
+nav.side ul ul{display:none;margin:2px 0 8px 14px;border-left:1px solid var(--line)}
+nav.side li.on>ul{display:block}
+nav.side ul ul a{font-size:.86rem;padding:4px 8px;color:var(--muted)}
+nav.side ul ul li.on2>a{color:var(--accent-dk);font-weight:700}
+.navtoggle{display:none}
+main{min-width:0;padding-top:28px}
+
+/* ---------- toolbar ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 28px}
+.toolbar .note{flex:1 1 260px;font-size:.88rem;color:var(--muted);margin:0}
+.btn{font:inherit;font-size:.92rem;font-weight:700;border:1.5px solid var(--navy);background:transparent;color:var(--navy);padding:7px 14px;border-radius:9px;cursor:pointer}
+.btn:hover{background:var(--ice)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dk);border-color:var(--accent-dk)}
+.btn.ghost{border-color:var(--line);color:var(--muted)}
+.btn:focus-visible,textarea:focus-visible,input:focus-visible+span,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* ---------- headings ---------- */
+main h2{font-family:var(--serif);font-size:1.7rem;line-height:1.2;margin:56px 0 18px;color:var(--navy);padding-bottom:10px;border-bottom:3px solid var(--accent)}
+main h2:first-of-type{margin-top:8px}
+main h2 .kicker{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dk);font-weight:700;margin-bottom:4px}
+main h3{font-family:var(--serif);font-size:1.3rem;margin:38px 0 12px;color:var(--navy);line-height:1.25}
+main h3 .num{display:inline-block;min-width:2.3rem;font-family:var(--sans);font-size:.85rem;font-weight:700;background:var(--navy);color:#fff;border-radius:6px;padding:1px 8px;margin-right:8px;vertical-align:.12em;text-align:center}
+:root[data-theme="dark"] main h3 .num{color:#0d1226}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) main h3 .num{color:#0d1226}}
+main h4{font-size:1.06rem;margin:26px 0 8px;color:var(--accent-dk);font-weight:700}
+main p{margin:0 0 14px}
+p.meta{display:inline-block;background:var(--ice);border-radius:999px;padding:4px 14px;font-size:.92rem;margin-bottom:18px}
+main hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+main ul,main ol{padding-left:1.4em;margin:0 0 16px}
+main li{margin:4px 0}
+main li>ul,main li>ol{margin:6px 0 8px}
+em strong,strong em{color:var(--accent-dk);font-weight:700}
+.lang{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:5px;padding:1px 6px;margin-right:4px;vertical-align:.1em;background:var(--ice);color:var(--navy)}
+.lang.es{background:var(--peach);color:var(--accent-dk)}
+
+/* ---------- tables ---------- */
+.table-wrap{overflow-x:auto;margin:6px 0 20px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.96rem}
+th{background:var(--navy);color:#fff;text-align:left;font-weight:700;padding:9px 13px}
+:root[data-theme="dark"] th{color:#0d1226}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) th{color:#0d1226}}
+td{padding:9px 13px;border-top:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even) td{background:var(--soft)}
+td:first-child{min-width:7.5em}
+
+/* ---------- callouts ---------- */
+aside.callout{background:var(--ice);border-left:5px solid var(--navy);border-radius:0 12px 12px 0;padding:12px 18px;margin:18px 0}
+aside.callout.warn{background:var(--peach);border-left-color:var(--accent)}
+aside.callout.rule{background:var(--navy);color:#fff;border-left-color:var(--accent);font-size:1.05rem}
+:root[data-theme="dark"] aside.callout.rule{color:#0d1226}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) aside.callout.rule{color:#0d1226}}
+aside.callout.source{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);font-family:var(--serif);font-size:1.04rem;line-height:1.7}
+aside.callout p:last-child{margin-bottom:0}
+aside.callout.rule strong,aside.callout.rule em{color:inherit}
+
+/* ---------- practice widgets ---------- */
+.practice{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:6px 20px 18px;margin:18px 0 26px;box-shadow:0 1px 0 rgba(30,44,89,.04)}
+.practice ol{padding-left:0;list-style:none;counter-reset:q;margin:6px 0 4px}
+.practice li{counter-increment:q;position:relative;padding:16px 0 14px 40px;border-bottom:1px solid var(--line)}
+.practice li:last-child{border-bottom:0}
+.practice li::before{content:counter(q);position:absolute;left:0;top:15px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:.9rem;display:grid;place-items:center}
+:root[data-theme="dark"] .practice li::before{color:#0d1226}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .practice li::before{color:#0d1226}}
+.practice .q{font-style:italic;font-size:1.04rem;margin-bottom:8px}
+.practice textarea{width:100%;min-height:44px;resize:vertical;font:inherit;font-size:.98rem;color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:9px;padding:8px 11px}
+.practice textarea::placeholder{color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);border-radius:9px;padding:6px 12px;font-size:.93rem;background:var(--bg)}
+.opts span b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ice);color:var(--navy);font-size:.8rem}
+.opts input:checked+span{border-color:var(--accent);background:var(--peach);font-weight:700}
+.opts input:checked+span b{background:var(--accent);color:#fff}
+.fb{margin-top:10px;padding:9px 13px;border-radius:9px;font-size:.95rem}
+.fb.ok{background:var(--ok-bg);color:var(--ok)}
+.fb.bad{background:var(--bad-bg);color:var(--bad)}
+.fb b{font-weight:700}
+.ans{margin-top:10px;padding:10px 14px;border-radius:9px;background:var(--ok-bg);border-left:4px solid var(--ok);font-size:.97rem}
+.ans .why{display:block;color:var(--muted);font-size:.9rem;margin-top:3px}
+.ans[hidden],.fb[hidden]{display:none}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
+.score{font-weight:700;color:var(--navy)}
+.tip{font-size:.86rem;color:var(--muted);margin:6px 0 0}
+li.chk{list-style:none;margin-left:-1.3em}
+li.chk label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:6px 10px;border-radius:8px}
+li.chk label:hover{background:var(--ice)}
+li.chk input{margin-top:.38em;width:18px;height:18px;accent-color:var(--accent);flex:none}
+li.chk input:checked+span{color:var(--muted);text-decoration:line-through}
+
+footer.end{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr;gap:0;padding:0 16px 60px}
+  nav.side{position:static;max-height:none;overflow:visible;padding:16px 0 0}
+  nav.side .list{display:none;margin-top:8px;border:1px solid var(--line);border-radius:12px;padding:8px;background:var(--card)}
+  nav.side.open .list{display:block}
+  nav.side .label{display:none}
+  .navtoggle{display:block;width:100%;text-align:left}
+  nav.side ul ul{display:block}
+  .hero{padding:30px 16px 26px}
+  body{font-size:16.5px}
+}
+@media print{
+  :root{--bg:#fff;--text:#000}
+  nav.side,.toolbar,#progress,.actions,.navtoggle{display:none!important}
+  .hero{background:#fff;color:#000;padding:0 0 10px;border-bottom:2px solid #1e2c59}
+  .hero h1,.hero .sub,.hero .when,.hero .intro,.eyebrow{color:#000}
+  .hero .intro{background:#fff;border-left:4px solid #d9743a}
+  .layout{display:block;padding:0}
+  body{font-size:11.5pt}
+  h2,h3,h4{break-after:avoid}
+  .table-wrap,.practice li,aside.callout{break-inside:avoid}
+  .practice textarea{border:1px solid #999;min-height:60px}
+}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+<header class="hero"><div class="hero-in">
+<span class="eyebrow">Clase online asincrónica · Canvas</span>
+<h1>SPAN 315 · Semana 7 (online asincrónica)</h1>
+<p class="sub">Pasivas e impersonales, formas -ING y verbos modales · Traducción: "Early Signs and Symptoms of Alzheimer's"</p>
+<p class="when">Martes 6 y jueves 8 de octubre de 2026 · Prof. Santi Arróniz · Introducción a la Traducción</p>
+<p class="intro">Esta guía reúne todo el contenido de la semana. Asegúrate de leer todo y seguir los pasos indicados.</p>
+</div></header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Índice de la guía">
+  <button class="btn ghost navtoggle" id="navtoggle" aria-expanded="false" aria-controls="navlist">☰  Índice de la guía</button>
+  <div class="list" id="navlist">
+    <p class="label">En esta guía</p>
+<ul><li><a href="#como-funciona-esta-semana">Cómo funciona esta semana</a><ul><li><a href="#hoja-de-ruta">Hoja de ruta</a></li><li><a href="#entregas-esta-guia-te-dira-cuando-hacer-y-entregar-cada-tarea">Entregas (esta guía te dirá cuándo hacer y entregar cada tarea)</a></li></ul></li><li><a href="#bloque-1-pasivas-e-impersonales-repaso-y-practica">Bloque 1: Pasivas e impersonales (repaso y práctica)</a><ul><li><a href="#11-en-general-el-ingles-prefiere-la-pasiva-y-el-espanol-prefiere-se">1.1 En general, el inglés prefiere la pasiva y el español prefiere “SE”</a></li><li><a href="#12-cinco-estrategias">1.2 Cinco estrategias:</a></li><li><a href="#estrategia-a-pasiva-con-ser-ser-participio">Estrategia A: Pasiva con SER (ser + participio)</a></li><li><a href="#estrategia-b-pasiva-refleja-con-se">Estrategia B: Pasiva refleja con SE</a></li><li><a href="#estrategia-c-impersonal-con-se">Estrategia C: Impersonal con SE</a></li><li><a href="#dos-alternativas-en-voz-activa">Dos alternativas en voz activa</a></li><li><a href="#13-practica-ser-se-reflejo-se-impersonal-o-activa">1.3 Práctica: ¿Ser, se reflejo, se impersonal o activa?</a></li></ul></li><li><a href="#bloque-2-estructuras-ing">Bloque 2: Estructuras -ING</a><ul><li><a href="#21-el-gerundio-gerund-cuando-ing-funciona-como-sustantivo">2.1 El gerundio (“gerund”), cuando -ing funciona como sustantivo</a></li><li><a href="#22-present-participle-tres-funciones-del-ing-que-no-es-sustantivo">2.2 Present participle: tres funciones del &quot;-ing&quot; que no es sustantivo</a></li><li><a href="#23-clausulas-de-relativo">2.3 Cláusulas de relativo</a></li><li><a href="#24-clausulas-dependientes-verbo-de-duda-emocion-o-negacion-subjuntivo">2.4 Cláusulas dependientes: verbo de duda, emoción o negación → subjuntivo</a></li><li><a href="#25-hoja-de-referencia-mapa-de-decision-del-ing">2.5 Hoja de referencia: mapa de decisión del -ING</a></li><li><a href="#26-practica-que-funcion-tiene-el-ing-traducela-8-min">2.6 Práctica: ¿Qué función tiene el -ing? Tradúcela (8 min)</a></li><li><a href="#hoja-de-practica-entrega-2-partes-ac">Hoja de Práctica (Entrega 2, partes A–C)</a></li></ul></li><li><a href="#bloque-3-traduccion-early-signs-and-symptoms-of-alzheimers">Bloque 3: Traducción - &quot;Early Signs and Symptoms of Alzheimer&#x27;s&quot;</a><ul><li><a href="#texto-original">Texto original</a></li><li><a href="#paso-1-el-encargo-para-quien-para-que-y-en-que-registro">Paso 1 → El encargo: ¿para quién, para qué y en qué registro?</a></li><li><a href="#paso-2-lectura-analitica-lee-con-ojos-de-traductor-antes-de-escribir-nada">Paso 2 → Lectura analítica: lee con ojos de traductor (antes de escribir nada)</a></li><li><a href="#paso-3-pistas-y-trampas-seis-puntos-para-decidir">Paso 3 → Pistas y trampas: seis puntos para decidir</a></li><li><a href="#paso-4-recursos-consulta-verifica-y-registra-en-tu-banco">Paso 4 → Recursos: consulta, verifica y registra en tu banco</a></li><li><a href="#paso-5-revision-final-lista-de-verificacion-antes-de-entregar">Paso 5 → Revisión final: lista de verificación antes de entregar</a></li><li><a href="#entrega-1">ENTREGA 1</a></li></ul></li><li><a href="#bloque-4-verbos-modales-parte-1">Bloque 4: Verbos modales (parte 1)</a><ul><li><a href="#41-para-empezar-un-modal-ingles-varias-traducciones">4.1 Para empezar: un modal inglés, varias traducciones</a></li><li><a href="#42-may-might">4.2 MAY, MIGHT</a></li><li><a href="#43-can-could-be-able-to">4.3 CAN, COULD, BE ABLE TO</a></li><li><a href="#44-must">4.4 MUST</a></li><li><a href="#45-need">4.5 NEED</a></li><li><a href="#46-mapa-de-modales-parte-1">4.6 Mapa de modales (parte 1)</a></li><li><a href="#47-practica-modales">4.7 Práctica: Modales</a></li><li><a href="#entregas-2-y-3">ENTREGAS 2 y 3</a></li></ul></li></ul>
+  </div>
+</nav>
+<main id="main">
+<div class="toolbar">
+  <p class="note">Lo que escribas en las casillas se guarda solo en este navegador, en este dispositivo. Para conservarlo o entregarlo, descárgalo.</p>
+  <button class="btn primary" id="btn-dl" type="button">Descargar mis respuestas</button>
+  <button class="btn" id="btn-print" type="button">Imprimir / PDF</button>
+  <button class="btn ghost" id="btn-clear" type="button">Borrar mis respuestas</button>
+</div>
+<h2 id="como-funciona-esta-semana">Cómo funciona esta semana</h2>
+<p>La clase de esta semana es <strong>asincrónica</strong> y se hace por Canvas. Hay tres pasos:</p>
+<ol>
+<li><strong>Estudia a tu ritmo.</strong> Sigue los bloques en orden. Cada bloque indica un tiempo estimado.</li>
+<li><strong>Haz las pausas de práctica.</strong> Intenta responder <em>antes</em> de abrir las respuestas, que aparecen justo debajo de cada pausa (al pulsar «Ver respuestas») para que te autocorrijas.</li>
+<li><strong>Hoja de Práctica.</strong> En Canvas encontrarás también una Hoja de Práctica. Tendrás que entregar esta práctica en Canvas.</li>
+</ol>
+<p>¿Dudas? Escríbeme por Canvas o por email.</p>
+<h3 id="hoja-de-ruta">Hoja de ruta</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>Contenido</th>
+<th>Tiempo estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 · Martes 6</td>
+<td>Pasivas e impersonales: repaso y práctica</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>2 · Martes 6</td>
+<td>Estructuras -ING (cont.): gerundio, present participle, relativas y dependientes</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>3 · Martes 6</td>
+<td>Traducción: "Early Signs and Symptoms of Alzheimer's"</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>4 · Jueves 8</td>
+<td>Verbos modales, parte 1: may/might, can/could, must, need</td>
+<td>60 min</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Los tiempos son una guía, no un límite. Las fechas de entrega aparecen en Canvas.</em></p>
+<h3 id="entregas-esta-guia-te-dira-cuando-hacer-y-entregar-cada-tarea">Entregas (esta guía te dirá cuándo hacer y entregar cada tarea)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Entrega</th>
+<th>Qué es</th>
+<th>Formato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Traducción de "Early Signs and Symptoms of Alzheimer's"</td>
+<td>Tarea en Canvas</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hoja de Práctica</td>
+<td>Word doc en Canvas</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Entrega inicial (draft) del Translation Resources Bank</td>
+<td>Word doc en Canvas</td>
+</tr>
+</tbody>
+</table></div>
+<p>Las instrucciones detalladas y las rúbricas de cada entrega están en Canvas.</p>
+<h2 id="bloque-1-pasivas-e-impersonales-repaso-y-practica"><span class="kicker">Bloque 1</span> Pasivas e impersonales (repaso y práctica)</h2>
+<p class="meta"><strong>Martes 6 de octubre · 45 min</strong></p>
+<h3 id="11-en-general-el-ingles-prefiere-la-pasiva-y-el-espanol-prefiere-se"><span class="num">1.1</span> En general, el inglés prefiere la pasiva y el español prefiere “SE”</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>En inglés</th>
+<th>En español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La pasiva es frecuente y neutra, sobre todo en textos científicos y periodísticos.</td>
+<td>La pasiva con <strong>ser</strong> es más común en la lengua escrita y formal. Normalmente se prefieren las impersonales o las pasivas reflejas.</td>
+</tr>
+<tr>
+<td><em>It is thought to spread mainly from person to person.</em></td>
+<td><em>Se cree que se transmite de persona a persona.</em></td>
+</tr>
+</tbody>
+</table></div>
+<p>El traductor decide según el <strong>tipo de texto</strong> qué construcción conviene. Además, el inglés ha influido en el español periodístico (traducción rápida de noticias), por eso la pasiva con <em>ser</em> aparece hoy más que antes.</p>
+<h3 id="12-cinco-estrategias"><span class="num">1.2</span> Cinco estrategias:</h3>
+<p>A. Pasiva con <em>ser</em><br />
+B. Pasiva refleja con <em>se</em><br />
+C. Impersonal con <em>se</em><br />
+D. Activa en 3.ª persona del plural<br />
+E. Activa con objeto adelantado (OD-V-S)</p>
+<h3 id="estrategia-a-pasiva-con-ser-ser-participio">Estrategia A: Pasiva con SER (ser + participio)</h3>
+<ol>
+<li>
+<p>El <strong>agente</strong> (quien hace la acción) puede mencionarse o no; el objeto directo pasa a ser el sujeto pasivo.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>The temple was built a long time ago (by the Romans).</em></li>
+<li><span class="lang es">ES</span> <em>El templo fue construido hace mucho tiempo (por los romanos).</em></li>
+</ul>
+</li>
+<li>
+<p>El <strong>participio</strong> (-ado, -ido, -cho, -to) funciona como adjetivo: concuerda en género y número con el sujeto.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>The cities will be destroyed…</em></li>
+<li><span class="lang es">ES</span> <em>Las ciudades serán destruidas…</em></li>
+</ul>
+</li>
+</ol>
+<aside class="callout "><p><strong>Recuerda:</strong> en "El templo fue construido" (masc. sing.) y "Las ciudades serán destruidas" (fem. pl.), el participio cambia de forma y el verbo <em>ser</em> concuerda con el sujeto.</p></aside>
+<h4 id="mas-detalles-presente-historico-y-otros-verbos-auxiliares"><em>Más detalles: presente histórico y otros verbos auxiliares</em></h4>
+<p><strong>Nota 1: Presente histórico.</strong> Es común en tratados de historia: se usa el presente para hablar del pasado, a menudo en voz pasiva.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>In 1941, the Soviet Union is invaded by German armies.</em></li>
+<li><span class="lang es">ES</span> <em>En 1941, la Unión Soviética es invadida por ejércitos alemanes.</em></li>
+</ul>
+<p><strong>Nota 2: Otros verbos</strong> (evitan la repetición, pero son menos comunes):</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Verbo</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quedar / quedarse</strong></td>
+<td><em>El periodo de elecciones quedó abierto ayer a medianoche.</em></td>
+</tr>
+<tr>
+<td><strong>Resultar</strong></td>
+<td><em>Cientos de personas resultaron afectadas por las inundaciones.</em></td>
+</tr>
+<tr>
+<td><strong>Verse</strong></td>
+<td><em>Cientos de personas se vieron afectadas por las inundaciones.</em></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="estrategia-b-pasiva-refleja-con-se">Estrategia B: Pasiva refleja con SE</h3>
+<ol>
+<li>
+<p>Solo con <strong>verbos transitivos en 3.ª persona</strong> (singular o plural). El sujeto suele ir después del verbo. En español se prefiere a la pasiva con <em>ser</em>.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>The sentences are translated into Spanish.</em></li>
+<li><span class="lang es">ES</span> <em>Se traducen las frases al español.</em> (vs. <em>Las frases son traducidas…</em>)</li>
+</ul>
+</li>
+<li>
+<p>El verbo <strong>concuerda con el sujeto</strong>.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>The agreements will be signed next week.</em> → <span class="lang es">ES</span> <em>Se firmarán los acuerdos la semana que viene.</em></li>
+<li><span class="lang en">EN</span> <em>The decision was made at the end of the meeting.</em> → <span class="lang es">ES</span> <em>Se tomó la decisión al terminar la reunión.</em></li>
+</ul>
+</li>
+<li>
+<p>Con <strong>verbos modales</strong>, <em>se</em> puede ir antes del modal o pegado al infinitivo.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>In the streets, weird things can be seen.</em></li>
+<li><span class="lang es">ES</span> <em>Se pueden observar cosas extrañas.</em> / <em>Pueden observarse cosas extrañas.</em></li>
+</ul>
+</li>
+</ol>
+<h3 id="estrategia-c-impersonal-con-se">Estrategia C: Impersonal con SE</h3>
+<ol>
+<li>Se usa con <strong>cualquier verbo</strong> (transitivo o intransitivo). El agente es irrelevante, indeterminado o desconocido, y no se menciona.</li>
+<li>El verbo va <strong>solo en 3.ª persona del singular</strong>.</li>
+<li>
+<p>Si el objeto directo es una <strong>persona</strong>, el verbo va seguido de la <strong>"a" personal</strong>.</p>
+<ul>
+<li><span class="lang en">EN</span> <em>Two supervisors were hired to solve the problem.</em></li>
+<li><span class="lang es">ES</span> <em>Se contrató </em><em>a</em><em> dos supervisores para solucionar el problema.</em></li>
+</ul>
+</li>
+</ol>
+<p><strong>Equivale en inglés a "one…", "you…", "people…" o a una pasiva inglesa:</strong></p>
+<ul>
+<li><span class="lang en">EN</span> <em>You couldn't hear a noise.</em> / <em>One's better off here.</em><br />
+  <span class="lang es">ES</span> <em>No se podía oír ni un solo ruido.</em> / <em>Se está mejor aquí.</em></li>
+<li><span class="lang en">EN</span> <em>In this country, people criticize a lot.</em> / <em>Finally, an agreement was reached.</em><br />
+  <span class="lang es">ES</span> <em>En este país se critica mucho.</em> / <em>Por fin se llegó a un acuerdo.</em></li>
+</ul>
+<h4 id="el-test-rapido-pasiva-refleja-o-impersonal"><em>El test rápido: ¿pasiva refleja o impersonal?</em></h4>
+<aside class="callout rule"><p><strong>Pluraliza lo que sigue al verbo:</strong> si el verbo cambia con él, es <strong>pasiva refleja</strong>; si el verbo se queda en singular, es <strong>impersonal</strong>.</p></aside>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Pasiva refleja</th>
+<th>Impersonal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Se </em><em>traduce</em><em> la frase.</em> → <em>Se </em><em>traducen</em><em> las frases.</em></td>
+<td><em>Se </em><em>contrató</em><em> a un supervisor.</em> → <em>Se </em><em>contrató</em><em> a dos supervisores.</em></td>
+</tr>
+<tr>
+<td>El verbo concuerda con el sujeto gramatical (la frase / las frases).</td>
+<td>El verbo no cambia: no hay sujeto gramatical. La "a" personal marca que las personas son objeto.</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout warn"><p><strong>Ojo:</strong> con personas y sin "a" también existe <em>Se contrataron dos supervisores</em> (pasiva refleja). Con verbos intransitivos (<em>Se vive bien aquí</em>) solo es posible la impersonal.</p></aside>
+<h4 id="cuidado-con-el-ingles-el-objeto-indirecto-no-puede-ser-sujeto-de-la-pasiva-en-espanol"><em>Cuidado con el inglés: el objeto indirecto no puede ser sujeto de la pasiva en español</em></h4>
+<p>En inglés, la persona que recibe la acción puede convertirse en sujeto (<em>He was sent a letter</em>). En español el sujeto de la pasiva es el <strong>objeto directo</strong> (la carta), y la persona queda como <strong>objeto indirecto</strong> (<em>le</em>).</p>
+<ul>
+<li><span class="lang en">EN</span> <em>He was sent a letter by the University.</em><ul>
+<li>Pasiva con <em>ser</em>: <em>Le fue enviada una carta por la Universidad.</em></li>
+<li>Pasiva refleja: <em>Se le envió una carta.</em></li>
+</ul>
+</li>
+<li><span class="lang en">EN</span> <em>Alice will be given an award.</em><ul>
+<li>Pasiva con <em>ser</em>: <em>Un premio le será entregado a Alice.</em></li>
+<li>Pasiva refleja: <em>Se le entregará un premio a Alice.</em></li>
+</ul>
+</li>
+</ul>
+<aside class="callout "><p><strong>Consejo:</strong> no traduzcas "Alice will be given…" como "Alice será dada…". Busca primero cuál es el objeto directo (un premio / una carta).</p></aside>
+<h3 id="dos-alternativas-en-voz-activa">Dos alternativas en voz activa</h3>
+<p><strong>Estrategia D: Activa en 3.ª persona del plural</strong> (cuando el agente no se menciona)</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>A new facility will be built here.</em> / <em>They will build a new facility here.</em></td>
+<td><em>Construirán una nueva instalación aquí.</em></td>
+</tr>
+<tr>
+<td><em>Construction workers are needed.</em></td>
+<td><em>Necesitan trabajadores de la construcción.</em></td>
+</tr>
+<tr>
+<td><em>Finally, an agreement was reached.</em></td>
+<td><em>Por fin, llegaron a un acuerdo.</em></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Estrategia E: Oración activa con orden inverso (OD – V – S) y pronombre redundante</strong></p>
+<ul>
+<li><span class="lang en">EN</span> <em>The general election was won by the socialist party.</em></li>
+<li><span class="lang es">ES</span> <em><strong>Las</strong> elecciones <strong>las</strong> ganó el partido socialista.</em></li>
+</ul>
+<aside class="callout warn"><p><strong>Ojo:</strong> en esta segunda opción el verbo concuerda con el sujeto real (<em>el partido socialista</em>) y el objeto adelantado se repite con el pronombre (<em>las</em>).</p></aside>
+<h3 id="13-practica-ser-se-reflejo-se-impersonal-o-activa"><span class="num">1.3</span> Práctica: ¿Ser, se reflejo, se impersonal o activa?</h3>
+<p>Clasifica cada oración: <strong>(A)</strong> pasiva con <em>ser</em> · <strong>(B)</strong> pasiva refleja con <em>se</em> · <strong>(C)</strong> impersonal con <em>se</em> · <strong>(D)</strong> alternativa activa (3.ª plural u OD-V-S).</p>
+<div class="practice" data-set="p0" data-type="classify"><ol><li data-right="A" data-why="Pasiva con ser: ser + participio concordado, con agente («por el Senado»)."><div class="q">La nueva ley fue aprobada por el Senado ayer.</div><div class="opts" role="radiogroup" aria-label="Clasificación de la oración 1"><label><input type="radio" name="p0-0" value="A"><span><b>A</b>Pasiva con ser</span></label><label><input type="radio" name="p0-0" value="B"><span><b>B</b>Pasiva refleja</span></label><label><input type="radio" name="p0-0" value="C"><span><b>C</b>Impersonal con se</span></label><label><input type="radio" name="p0-0" value="D"><span><b>D</b>Activa</span></label></div><div class="fb" hidden></div></li><li data-right="B" data-why="Pasiva refleja: el verbo concuerda con «las nuevas normas» (plural)."><div class="q">Se aprobaron las nuevas normas ayer.</div><div class="opts" role="radiogroup" aria-label="Clasificación de la oración 2"><label><input type="radio" name="p0-1" value="A"><span><b>A</b>Pasiva con ser</span></label><label><input type="radio" name="p0-1" value="B"><span><b>B</b>Pasiva refleja</span></label><label><input type="radio" name="p0-1" value="C"><span><b>C</b>Impersonal con se</span></label><label><input type="radio" name="p0-1" value="D"><span><b>D</b>Activa</span></label></div><div class="fb" hidden></div></li><li data-right="C" data-why="Impersonal con se: «a» personal + verbo en singular."><div class="q">Se entrevistó a los candidatos por la mañana.</div><div class="opts" role="radiogroup" aria-label="Clasificación de la oración 3"><label><input type="radio" name="p0-2" value="A"><span><b>A</b>Pasiva con ser</span></label><label><input type="radio" name="p0-2" value="B"><span><b>B</b>Pasiva refleja</span></label><label><input type="radio" name="p0-2" value="C"><span><b>C</b>Impersonal con se</span></label><label><input type="radio" name="p0-2" value="D"><span><b>D</b>Activa</span></label></div><div class="fb" hidden></div></li><li data-right="D" data-why="Activa en 3.ª plural: sin se ni ser; el agente no se menciona."><div class="q">Han cerrado el aeropuerto por la niebla.</div><div class="opts" role="radiogroup" aria-label="Clasificación de la oración 4"><label><input type="radio" name="p0-3" value="A"><span><b>A</b>Pasiva con ser</span></label><label><input type="radio" name="p0-3" value="B"><span><b>B</b>Pasiva refleja</span></label><label><input type="radio" name="p0-3" value="C"><span><b>C</b>Impersonal con se</span></label><label><input type="radio" name="p0-3" value="D"><span><b>D</b>Activa</span></label></div><div class="fb" hidden></div></li><li data-right="C" data-why="Impersonal con se: verbo intransitivo, no hay objeto ni sujeto gramatical."><div class="q">En este país se vive bien.</div><div class="opts" role="radiogroup" aria-label="Clasificación de la oración 5"><label><input type="radio" name="p0-4" value="A"><span><b>A</b>Pasiva con ser</span></label><label><input type="radio" name="p0-4" value="B"><span><b>B</b>Pasiva refleja</span></label><label><input type="radio" name="p0-4" value="C"><span><b>C</b>Impersonal con se</span></label><label><input type="radio" name="p0-4" value="D"><span><b>D</b>Activa</span></label></div><div class="fb" hidden></div></li><li data-right="D" data-why="Activa OD-V-S: objeto adelantado + pronombre «los»; el verbo concuerda con «la directora»."><div class="q">Los resultados los anunció la directora.</div><div class="opts" role="radiogroup" aria-label="Clasificación de la oración 6"><label><input type="radio" name="p0-5" value="A"><span><b>A</b>Pasiva con ser</span></label><label><input type="radio" name="p0-5" value="B"><span><b>B</b>Pasiva refleja</span></label><label><input type="radio" name="p0-5" value="C"><span><b>C</b>Impersonal con se</span></label><label><input type="radio" name="p0-5" value="D"><span><b>D</b>Activa</span></label></div><div class="fb" hidden></div></li></ol><div class="actions"><button class="btn primary" type="button" data-act="check">Comprobar</button><button class="btn" type="button" data-act="reset">Reiniciar</button><span class="score" aria-live="polite"></span></div><p class="tip">Elige una opción en cada oración y pulsa «Comprobar».</p></div>
+<h2 id="bloque-2-estructuras-ing"><span class="kicker">Bloque 2</span> Estructuras -ING</h2>
+<p class="meta"><strong>Martes 6 de octubre (~45 min)</strong> · Material de apoyo: <em>“N. Construcciones en -ing del inglés” (en Canvas)</em>.</p>
+<p>Este bloque empieza con el <strong>gerundio</strong> y continúa con el <strong>present participle</strong>, las cláusulas de relativo y las cláusulas dependientes.</p>
+<h3 id="21-el-gerundio-gerund-cuando-ing-funciona-como-sustantivo"><span class="num">2.1</span> El gerundio (“gerund”), cuando <em>-ing</em> funciona como sustantivo</h3>
+<p>El <em>gerund</em> inglés funciona como <strong>sustantivo</strong>. En español equivale a un <strong>sustantivo</strong> o a un <strong>infinitivo</strong> (a menudo ambos son válidos).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>I don't enjoy </em><em>cooking</em><em>.</em></td>
+<td><em>No disfruto de </em><em>la cocina</em><em>.</em> / <em>No disfruto </em><em>cocinar</em><em>.</em></td>
+</tr>
+<tr>
+<td><em>We used to go </em><em>fruit-picking</em><em> in the past.</em></td>
+<td><em>Antes solíamos ir a </em><em>la recogida de la fruta</em><em>.</em> / <em>…a </em><em>recoger</em><em> fruta.</em></td>
+</tr>
+<tr>
+<td><em>They never liked </em><em>dancing</em><em>.</em></td>
+<td><em>Nunca les gustó </em><em>el baile</em><em>.</em> / <em>Nunca les gustó </em><em>bailar</em><em>.</em></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout "><p><strong>Clave:</strong> cuando ambas opciones funcionan, la elección depende del registro y de lo que suene más natural en español; no hay una única respuesta correcta.</p></aside>
+<h4 id="dos-matices-a-veces-el-espanol-si-tiene-una-preferencia-clara"><em>Dos matices: a veces el español sí tiene una preferencia clara:</em></h4>
+<p><strong>Nota 1: El español prefiere el INFINITIVO</strong></p>
+<ul>
+<li><em>I really hate flying.</em> → <em>De veras que no me gusta volar.</em> (no “el vuelo”)</li>
+<li><strong>Excepto</strong> si se habla de un vuelo específico o de un tipo de vuelo (sustantivo en plural):<ul>
+<li><em>I hate </em><em>flying</em><em> across the Atlantic</em> → <em>Odio </em><em>los vuelos</em><em> trasatlánticos.</em></li>
+<li><em>I like space <strong>flying</strong></em> → <em>Me gustan <strong>los vuelos</strong> espaciales.</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>Nota 2: El español prefiere el SUSTANTIVO</strong> (por uso más común)</p>
+<ul>
+<li><em>All that </em><em>chatting</em><em> led to nothing.</em> → <em>Toda esa </em><em>charla</em><em> no condujo a nada.</em> (no "todo ese charlar")</li>
+</ul>
+<h4 id="preposicion-ing-infinitivo-en-espanol-casi-siempre">Preposición + "-ing" → infinitivo en español (casi siempre)</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Before (preposition) </em><em>beginning</em><em> a translation, read the whole text.</em></td>
+<td><em>Antes de </em><em>empezar</em><em> una traducción, lee el texto completo.</em></td>
+</tr>
+<tr>
+<td><em>He left without (preposition) </em><em>saying</em><em> anything.</em></td>
+<td><em>Se fue sin decir nada.</em></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Excepción → "by + -ing".</strong> Se traduce como <strong>"al + infinitivo"</strong> o como <strong>"-ando / -iendo"</strong>, no como infinitivo simple:</p>
+<ul>
+<li><em>He got rich </em><em>by selling</em><em> illegal videos.</em> → <em>Se hizo rico </em><em>al vender</em><em> videos ilegales.</em> / <em>…</em><em>vendiendo</em><em> videos ilegales.</em></li>
+</ul>
+<h4 id="practica-rapida-el-gerundio">Práctica rápida: el gerundio</h4>
+<p>Traduce estas 4 frases. Aplica lo aprendido: sustantivo vs. infinitivo, y preposición + "-ing" → infinitivo (con su excepción "by + -ing").</p>
+<div class="practice" data-set="p1" data-type="translate"><ol><li><div class="q">Reading calms me down.</div><textarea data-k="p1:0" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 1"></textarea><div class="ans" hidden><em>Leer me calma.</em> / <em>La lectura me calma.</em></div></li><li><div class="q">After finishing the report, she went home.</div><textarea data-k="p1:1" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 2"></textarea><div class="ans" hidden><em>Después de terminar el informe, se fue a casa.</em></div></li><li><div class="q">He succeeded by working every weekend.</div><textarea data-k="p1:2" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 3"></textarea><div class="ans" hidden><em>Tuvo éxito al trabajar todos los fines de semana.</em> / <em>Tuvo éxito trabajando todos los fines de semana.</em></div></li><li><div class="q">I can&#x27;t stand waiting in long lines.</div><textarea data-k="p1:3" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 4"></textarea><div class="ans" hidden><em>No soporto esperar en filas largas.</em></div></li></ol><div class="actions"><button class="btn primary" type="button" data-act="reveal" aria-expanded="false">Ver respuestas</button></div><p class="tip">Escribe primero tus respuestas y después pulsa «Ver respuestas» para autocorregirte.</p></div>
+<h3 id="22-present-participle-tres-funciones-del-ing-que-no-es-sustantivo"><span class="num">2.2</span> Present participle: tres funciones del "-ing" que no es sustantivo</h3>
+<p>El desafío es <strong>identificar la función ANTES de traducir</strong>. Cada función se traduce de forma distinta.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Ejemplo en inglés</th>
+<th>En español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Como verbo</strong></td>
+<td><em>We </em><em>were reading</em><em> all afternoon.</em></td>
+<td><strong><em>Estuvimos leyendo</em><em> toda la tarde.</em> / </strong><em>Leímos</em><em> toda la tarde.</em></td>
+</tr>
+<tr>
+<td><strong>Como adjetivo</strong></td>
+<td><em>Alice is a very </em><em>charming</em><em> girl.</em></td>
+<td><em>Alice es una chica </em><em>encantadora</em><em>.</em></td>
+</tr>
+<tr>
+<td><strong>Como adverbio</strong></td>
+<td><em>They came in </em><em>singing</em><em>.</em></td>
+<td><em>Llegaron </em><em>cantando</em><em>.</em></td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="como-verbo">Como verbo:</h4>
+<p>Formas progresivas, ¿estar + gerundio o tiempo simple?</p>
+<ul>
+<li><span class="lang en">EN</span> <em>We </em><em>were reading</em><em> all afternoon.</em> → <span class="lang es">ES</span> <strong><em>Estuvimos leyendo</em><em> toda la tarde.</em> / </strong><em>Leímos</em><em> toda la tarde.</em></li>
+</ul>
+<p>El español usa "estar + gerundio" <strong>menos</strong> que el inglés "be + -ing". Si el sentido de "acción en curso" no es esencial, un tiempo simple suele sonar más natural.</p>
+<p><strong>Dos casos del texto de COVID-19 que vimos:</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>The virus is spreading very easily.</em></td>
+<td><em>El virus se propaga con mucha facilidad.</em> / <em>…se está propagando…</em></td>
+</tr>
+<tr>
+<td><em>We are still learning more about this virus.</em></td>
+<td><em>Todavía estamos aprendiendo más sobre este virus.</em></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout "><p><strong>Pista:</strong> se conserva "estar + gerundio" cuando el matiz de duración o de "todavía" es importante (<em>still learning</em>). Consejo práctico: pregúntate si la acción en curso es esencial para el sentido.</p></aside>
+<h4 id="como-adjetivo">Como adjetivo:</h4>
+<p>Casi nunca se traduce con -ando / -iendo</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Alice is a very charming girl.</em></td>
+<td><em>Alice es una chica encantadora.</em></td>
+</tr>
+<tr>
+<td><em>They don't have running water.</em></td>
+<td><em>No tienen agua corriente.</em></td>
+</tr>
+<tr>
+<td><em>There are some people in the waiting room.</em></td>
+<td><em>Hay gente en la sala de espera.</em></td>
+</tr>
+<tr>
+<td><em>This is Julia's walking stick.</em></td>
+<td><em>Este es el bastón de Julia.</em></td>
+</tr>
+<tr>
+<td><em>It's a nice swimming pool.</em></td>
+<td><em>Es una piscina estupenda.</em></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Tres salidas:</strong></p>
+<ol>
+<li>Un <strong>adjetivo español equivalente</strong> (<em>encantadora</em>, <em>corriente</em>).</li>
+<li>Un <strong>sustantivo con "de / para"</strong> (<em>sala de espera</em>).</li>
+<li>Un <strong>sustantivo propio de la lengua</strong> (<em>bastón</em>, <em>piscina</em>).</li>
+</ol>
+<aside class="callout "><p>Si traduces literalmente <em>running water</em> como "agua corriendo", pierdes el sentido de "agua corriente" (del grifo).</p></aside>
+<h4 id="como-adverbio">Como adverbio:</h4>
+<p>Aquí sí usamos el gerundio español</p>
+<ul>
+<li><span class="lang en">EN</span> <em>They came in </em><em>singing</em><em>.</em> → <span class="lang es">ES</span> <em>Llegaron </em><em>cantando</em><em>.</em></li>
+<li><span class="lang en">EN</span> <em>I saw her </em><em>working</em><em> in her studio.</em> → <span class="lang es">ES</span> <em>La vi </em><em>trabajando</em><em> en su estudio.</em></li>
+</ul>
+<p>El "-ing" que indica el <strong>modo o la circunstancia</strong> de la acción suele equivaler al <strong>gerundio español</strong> (-ando / -iendo).</p>
+<aside class="callout warn"><p><strong>Cuidado:</strong> el gerundio español modifica al <strong>verbo</strong> (o a un complemento tras verbos de percepción como <em>ver</em> u <em>oír</em>). <strong>No puede describir a un sustantivo:</strong> "el hombre leyendo el periódico" no es español natural. Para eso, usa la cláusula de relativo (siguiente apartado). Regla práctica: gerundio español = adverbio.</p></aside>
+<h3 id="23-clausulas-de-relativo"><span class="num">2.3</span> Cláusulas de relativo</h3>
+<p>En inglés, el "-ing" puede modificar a un sustantivo <strong>sin</strong> pronombre relativo (función adjetiva). En español siempre se necesita una cláusula de relativo.</p>
+<ul>
+<li>Con relativo: <em>The man </em><em>who</em><em> (relativo) was reading the paper got up and left.</em></li>
+<li>Solo con -ing: <em>The man </em><em>reading</em><em> the paper got up and left.</em></li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>The man reading the paper got up and left.</em></td>
+<td><em>El hombre </em><em>que</em><em> leía el periódico se levantó y se fue.</em></td>
+</tr>
+<tr>
+<td><em>The students sitting in the front row asked questions.</em></td>
+<td><em>Los estudiantes </em><em>que</em><em> estaban sentados en la primera fila hicieron preguntas.</em></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout "><p><strong>Pista:</strong> si un "-ing" va justo después de un sustantivo y no es un verbo principal, probablemente hay un <em>who / that + verbo</em> escondido.</p></aside>
+<h3 id="24-clausulas-dependientes-verbo-de-duda-emocion-o-negacion-subjuntivo"><span class="num">2.4</span> Cláusulas dependientes: verbo de duda, emoción o negación → subjuntivo</h3>
+<p>Cuando el verbo principal indica duda, emoción, negación…, el español necesita <strong>subjuntivo</strong> aunque el inglés use un "-ing". Piensa en la estructura <em>verbo principal + sujeto distinto + -ing</em> como señal de subjuntivo.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Inglés</th>
+<th>Español</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>I don't like people </em><em>shouting</em><em> at me.</em></td>
+<td><em>No me gusta que la gente me </em><em>grite</em><em> (subjuntivo).</em></td>
+</tr>
+<tr>
+<td><em>They better stop </em><em>talking</em><em> to me.</em></td>
+<td><em>Mejor que no me </em><em>hablen</em><em> (subjuntivo).</em></td>
+</tr>
+<tr>
+<td><em>He denied </em><em>stealing</em><em> the money.</em></td>
+<td><em>Negó que </em><em>robara</em><em> (subjuntivo) el dinero.</em></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout "><p><strong>Nota:</strong> con la negación también es posible, en algunos casos, usar el infinitivo: <em>Negó robar el dinero</em>.</p></aside>
+<h3 id="25-hoja-de-referencia-mapa-de-decision-del-ing"><span class="num">2.5</span> Hoja de referencia: mapa de decisión del -ING</h3>
+<p><em>Guárdala en tu Translation Resources Bank (nota de gramática/estrategia).</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Función del -ing  en inglés</th>
+<th>En español</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerund (sustantivo)</td>
+<td>Sustantivo o infinitivo</td>
+<td><em>I hate flying</em> → <em>Odio volar</em></td>
+</tr>
+<tr>
+<td>Preposición + -ing</td>
+<td>Infinitivo</td>
+<td><em>without saying</em> → <em>sin decir</em></td>
+</tr>
+<tr>
+<td>by + -ing</td>
+<td>al + infinitivo / -ando</td>
+<td><em>by selling</em> → <em>al vender</em> / <em>vendiendo</em></td>
+</tr>
+<tr>
+<td>Present participle (verbo)</td>
+<td>estar + gerundio o tiempo simple</td>
+<td><em>were reading</em> → <em>estuvimos leyendo</em> / <em>leímos</em></td>
+</tr>
+<tr>
+<td>Present participle (adjetivo)</td>
+<td>adjetivo propio, de/para + sustantivo…</td>
+<td><em>running water</em> → <em>agua corriente</em></td>
+</tr>
+<tr>
+<td>Present participle (adverbio)</td>
+<td>gerundio (-ando / -iendo)</td>
+<td><em>came in singing</em> → <em>llegaron cantando</em></td>
+</tr>
+<tr>
+<td>-ing que modifica un sustantivo</td>
+<td>cláusula de relativo</td>
+<td><em>The man reading…</em> → <em>El hombre que leía…</em></td>
+</tr>
+<tr>
+<td>Tras verbo de duda, emoción, negación</td>
+<td>subjuntivo (o infinitivo)</td>
+<td><em>I don't like people shouting</em> → <em>No me gusta que la gente grite</em></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="26-practica-que-funcion-tiene-el-ing-traducela-8-min"><span class="num">2.6</span> Práctica: ¿Qué función tiene el -ing? Tradúcela (8 min)</h3>
+<p>Para cada oración: (1) identifica la función del "-ing" y (2) tradúcela al español aplicando la estrategia correcta. Escribe tu traducción en un papel o en un documento <strong>antes</strong> de ver las respuestas.</p>
+<div class="practice" data-set="p2" data-type="translate"><ol><li><div class="q">Learning a second language takes patience.</div><textarea data-k="p2:0" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 1"></textarea><div class="ans" hidden><em>Aprender un segundo idioma requiere paciencia.</em><span class="why">Gerund sujeto → infinitivo.</span></div></li><li><div class="q">She was waiting for the bus when it started to rain.</div><textarea data-k="p2:1" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 2"></textarea><div class="ans" hidden><em>Esperaba el autobús cuando empezó a llover.</em><span class="why">Verbo progresivo → imperfecto (o <em>estaba esperando</em>).</span></div></li><li><div class="q">The nurse took my blood pressure before leaving.</div><textarea data-k="p2:2" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 3"></textarea><div class="ans" hidden><em>La enfermera me tomó la presión antes de irse.</em><span class="why">Preposición + -ing → infinitivo.</span></div></li><li><div class="q">The patients waiting in the lobby were called one by one.</div><textarea data-k="p2:3" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 4"></textarea><div class="ans" hidden><em>Llamaron a los pacientes que esperaban en el vestíbulo uno por uno.</em><span class="why">-ing que modifica un sustantivo → relativo; pasiva → activa en 3.ª plural.</span></div></li><li><div class="q">He asked me for a sleeping pill.</div><textarea data-k="p2:4" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 5"></textarea><div class="ans" hidden><em>Me pidió una pastilla para dormir.</em><span class="why">-ing adjetival → <em>para + infinitivo</em>, no «pastilla durmiendo».</span></div></li><li><div class="q">I don&#x27;t like them telling me what to do.</div><textarea data-k="p2:5" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 6"></textarea><div class="ans" hidden><em>No me gusta que me digan lo que tengo que hacer.</em><span class="why">Verbo de emoción/negación → subjuntivo.</span></div></li></ol><div class="actions"><button class="btn primary" type="button" data-act="reveal" aria-expanded="false">Ver respuestas</button></div><p class="tip">Escribe primero tus respuestas y después pulsa «Ver respuestas» para autocorregirte.</p></div>
+<h3 id="hoja-de-practica-entrega-2-partes-ac">Hoja de Práctica (Entrega 2, partes A–C)</h3>
+<p>Haz las siguientes asignaciones antes de seguir con esta guía:</p>
+<ul>
+<li><strong>Hoja de práctica</strong>: Partes <strong>A</strong> (pasivas), <strong>B</strong> (impersonales) y <strong>C</strong> (-ING).</li>
+<li><strong>Tu banco de recursos:</strong> añade las notas de gramática/estrategia por tema (pasivas/impersonales y -ING) con tus propios ejemplos.</li>
+</ul>
+<h2 id="bloque-3-traduccion-early-signs-and-symptoms-of-alzheimers"><span class="kicker">Bloque 3</span> Traducción - <em>"Early Signs and Symptoms of Alzheimer's"</em></h2>
+<p class="meta"><strong>Martes 6 de octubre · 45 min</strong> · <em>Early Signs and Symptoms of Alzheimer's</em> en Canvas (se reproduce abajo para que lo tengas a mano).</p>
+<h3 id="texto-original">Texto original</h3>
+<aside class="callout source"><p><strong>Early Signs and Symptoms of Alzheimer's</strong></p>
+<p>Memory loss that disrupts daily life may be a symptom of Alzheimer's or another dementia. Alzheimer's is a brain disease that causes a slow decline in memory, thinking and reasoning skills. There are 10 warning signs and symptoms. Every individual may experience one or more of these signs in different degrees. If you notice any of them, please see a doctor.</p>
+<p>One of the most common signs of Alzheimer's is memory loss, especially forgetting recently learned information. Others include forgetting important dates or events; asking for the same information over and over; increasingly needing to rely on memory aids (e.g., reminder notes or electronic devices) or family members for things they used to handle on their own.</p></aside>
+<h3 id="paso-1-el-encargo-para-quien-para-que-y-en-que-registro">Paso 1 → El encargo: ¿para quién, para qué y en qué registro?</h3>
+<p>Todo encargo de traducción empieza por <strong>definir lector, propósito y registro.</strong></p>
+<div class="table-wrap"><table>
+
+<tbody>
+<tr>
+<td><strong>Texto</strong></td>
+<td>Texto informativo de salud pública sobre una enfermedad (Alzheimer's) y sus señales de advertencia.</td>
+</tr>
+<tr>
+<td><strong>Lector</strong></td>
+<td>Público general hispanohablante en EE. UU. No se asume formación médica.</td>
+</tr>
+<tr>
+<td><strong>Propósito</strong></td>
+<td>Informar con claridad y motivar a la persona a consultar a un profesional de la salud.</td>
+</tr>
+<tr>
+<td><strong>Registro</strong></td>
+<td>Formal pero cercano. Se sugiere trato de "usted", como en la comunicación de salud pública. Si eliges otro, justifícalo en tus notas.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Anota estas cuatro decisiones:</strong> las usarás en las notas de traducción de tu Entrega 1.</p>
+<h3 id="paso-2-lectura-analitica-lee-con-ojos-de-traductor-antes-de-escribir-nada">Paso 2 → Lectura analítica: lee con ojos de traductor (antes de escribir nada)</h3>
+<p>Diez minutos de análisis ahorran mucho tiempo y errores al traducir. Haz esta lectura en papel o en tu documento. <strong>Todavía no traduzcas: primero analiza.</strong></p>
+<ul>
+<li><strong>1. Subraya los -ING.</strong> Clasifica cada uno: gerund, verbo, adjetivo, adverbio o dentro de una relativa.</li>
+<li><strong>2. Marca pasivas e impersonales.</strong> Incluye estructuras como <em>there are…</em> ¿Qué estrategia usarás en español?</li>
+<li><strong>3. Encuentra las relativas.</strong> ¿Hay <em>that / who</em> o un -ING que modifica a un sustantivo?</li>
+<li><strong>4. Lista la terminología.</strong> Subraya términos médicos o técnicos y anótalos para tu glosario.</li>
+<li><strong>5. Revisa el tono.</strong> Fíjate en las frases dirigidas al lector (cortesía, consejos).</li>
+</ul>
+<h3 id="paso-3-pistas-y-trampas-seis-puntos-para-decidir">Paso 3 → Pistas y trampas: seis puntos para decidir</h3>
+<p>No damos las traducciones: son preguntas para que tomes decisiones y las expliques en tus notas.</p>
+<ol>
+<li><strong>"a slow decline in memory, thinking and reasoning skills"</strong>: ¿qué función tienen <em>thinking</em> y <em>reasoning</em>? ¿Cómo suena más natural en español?</li>
+<li><strong>"brain disease"</strong>: ¿es lo mismo que "enfermedad mental"? Compara los significados antes de decidir.</li>
+<li><strong>"Others include forgetting…; asking…; increasingly needing…"</strong>: tres -ING en lista. ¿Mantendrás el paralelismo en español? ¿Qué haces con <em>increasingly</em>?</li>
+<li><strong>"memory aids (e.g., reminder notes or electronic devices)"</strong>: busca equivalentes naturales y decide cómo presentar el ejemplo.</li>
+<li><strong>"things they used to handle on their own"</strong>: piensa en <em>used to</em> (¿qué tiempo verbal refleja la costumbre pasada?) y en <em>on their own</em>.</li>
+<li><strong>"please see a doctor"</strong>: registro y cortesía. ¿Qué verbo se usa en español en contextos médicos para <em>see a doctor</em>?</li>
+</ol>
+<h3 id="paso-4-recursos-consulta-verifica-y-registra-en-tu-banco">Paso 4 → Recursos: consulta, verifica y registra en tu banco</h3>
+<ul>
+<li><strong>Consulta:</strong> diccionarios (RAE/DLE), corpus bilingües (Linguee) y glosarios médicos fiables. Compara más de una fuente.</li>
+<li><strong>Verifica:</strong> no te quedes con la primera opción; comprueba que el término se usa en textos de salud en español.</li>
+<li><strong>Registra:</strong> añade a tu Translation Resources Bank cualquier entrada nueva que necesites (glosario o falsos amigos) y notas de estrategia.</li>
+</ul>
+<aside class="callout "><p>La traducción debe ser tu propio trabajo. Los recursos te ayudan a decidir, no a copiar. Lo que registres hoy te servirá en el examen final.</p></aside>
+<h3 id="paso-5-revision-final-lista-de-verificacion-antes-de-entregar">Paso 5 → Revisión final: lista de verificación antes de entregar</h3>
+<ul>
+<li class="chk"><label><input type="checkbox"><span>Cada -ING tiene la forma española adecuada a su función (no todo es -ando / -iendo).</span></label></li>
+<li class="chk"><label><input type="checkbox"><span>Las listas mantienen una estructura paralela en español.</span></label></li>
+<li class="chk"><label><input type="checkbox"><span>Las pasivas e impersonales suenan naturales (¿<em>ser</em>, <em>se</em> o activa?).</span></label></li>
+<li class="chk"><label><input type="checkbox"><span>El registro es consistente en todo el texto (por ejemplo, "usted").</span></label></li>
+<li class="chk"><label><input type="checkbox"><span>La terminología está comprobada y anotada en tu banco de recursos.</span></label></li>
+<li class="chk"><label><input type="checkbox"><span>Releíste en voz alta: suena a español natural, no a calco del inglés.</span></label></li>
+<li class="chk"><label><input type="checkbox"><span>Tus notas de traducción explican tus 5 decisiones principales.</span></label></li>
+</ul>
+<h3 id="entrega-1">ENTREGA 1</h3>
+<ol>
+<li><strong>Tu traducción:</strong> traducción completa del texto al español, en Word o texto.</li>
+<li><strong>Notas de traducción:</strong> cinco decisiones explicadas: 2 sobre estructuras -ING, 1 sobre pasiva o impersonal, 1 sobre terminología y 1 sobre registro/lector, en Word o texto.</li>
+</ol>
+<aside class="callout "><p><strong>Recuerda:</strong> esta traducción puede formar parte de tu Portfolio de traducciones.</p></aside>
+<h2 id="bloque-4-verbos-modales-parte-1"><span class="kicker">Bloque 4</span> Verbos modales (parte 1)</h2>
+<p class="meta"><strong>Jueves 8 de octubre · 60 min</strong> · Material de apoyo: la lectura <em>“Ñ. Verbos modales”</em>.</p>
+<h3 id="41-para-empezar-un-modal-ingles-varias-traducciones"><span class="num">4.1</span> Para empezar: un modal inglés, varias traducciones</h3>
+<p>Los verbos modales ingleses (verbos auxiliares) expresan posibilidad, habilidad, permiso, obligación… y cada función se traduce con una estructura distinta (a veces con subjuntivo).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Hoy · Parte 1</th>
+<th>Parte 2 · Más adelante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>may / might</strong> · <strong>can / could / be able to</strong> · <strong>must</strong> · <strong>need</strong></td>
+<td>should / ought to · would · will · be going to</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="42-may-might"><span class="num">4.2</span> MAY, MIGHT</h3>
+<h4 id="a-posibilidad-en-el-presente-o-en-el-futuro">A. Posibilidad en el presente o en el futuro</h4>
+<ul>
+<li><span class="lang en">EN</span> <em>He may be in his office.</em> / <em>They may come tomorrow.</em></li>
+</ul>
+<p><strong>Tres maneras de traducirlo:</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estructura</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quizás / tal vez + subjuntivo</strong></td>
+<td><em>Quizás </em><em>esté</em><em> en su oficina.</em> / <em>Tal vez </em><em>vengan</em><em> mañana.</em></td>
+</tr>
+<tr>
+<td><strong>Puede que + subjuntivo</strong></td>
+<td><em>Puede que </em><em>esté</em><em> en su oficina.</em> / <em>Puede que </em><em>vengan</em><em> mañana.</em></td>
+</tr>
+<tr>
+<td><strong>A lo mejor + indicativo</strong></td>
+<td><em>A lo mejor </em><em>está</em><em> en su oficina.</em> / <em>A lo mejor </em><em>vienen</em><em> mañana.</em></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="callout warn"><p><strong>Ojo:</strong> <em>quizás / tal vez</em> y <em>puede que</em> piden <strong>subjuntivo</strong>; <em>a lo mejor</em> pide <strong>indicativo</strong>.</p></aside>
+<h4 id="b-posibilidad-en-el-pasado">B. Posibilidad en el pasado</h4>
+<ul>
+<li><span class="lang en">EN</span> <em>He may have left town.</em></li>
+<li><span class="lang es">ES</span> <em>Quizás / Tal vez haya dejado la ciudad.</em> (pretérito perfecto de subjuntivo)</li>
+<li>O también: <em>Puede que dejara la ciudad.</em> (<em>puede que</em> + imperfecto de subjuntivo)</li>
+</ul>
+<h4 id="c-para-pedir-permiso">C. Para pedir permiso</h4>
+<ul>
+<li><span class="lang en">EN</span> <em>May I come in?</em></li>
+<li><span class="lang es">ES</span> <em>¿Puedo entrar?</em> / <em>¿Podría entrar?</em> (<em>podría</em> suena más cortés que <em>puedo</em>)</li>
+</ul>
+<aside class="callout "><p><strong>Nota:</strong> en inglés se puede usar <em>may</em> o <em>might</em> indistintamente. Sin embargo, en cláusulas dependientes o subordinadas en el pasado se utiliza <em>might</em>.</p></aside>
+<h3 id="43-can-could-be-able-to"><span class="num">4.3</span> CAN, COULD, BE ABLE TO</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Se traduce como</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Habilidad</strong></td>
+<td><strong>saber</strong>, o se omite el modal</td>
+<td><em>She can speak French.</em> / <em>She could speak French.</em> → <strong><em>Sabe</em><em> hablar francés.</em> / </strong><em>Sabía</em><em> hablar francés.</em> (o: <em>Habla francés</em> / <em>Hablaba francés</em>)</td>
+</tr>
+<tr>
+<td><strong>B. Permiso</strong></td>
+<td><strong>poder</strong></td>
+<td><em>Can I go now?</em> → <em>¿</em><em>Puedo</em><em> irme ya?</em></td>
+</tr>
+<tr>
+<td><strong>C. Capacidad</strong> ("ser capaz de")</td>
+<td><strong>poder</strong>, o se omite el modal</td>
+<td><em>Can you hear me?</em> / <em>I couldn't see them.</em> → <em>¿</em><em>Puedes</em><em> oírme?</em> / <em>No </em><em>pude</em><em> verlos.</em> (o: <em>¿Me oyes?</em> / <em>No los vi</em>)</td>
+</tr>
+</tbody>
+</table></div>
+<p>En español muchas veces el modal desaparece y basta el verbo principal (<em>¿Me oyes?</em>).</p>
+<h3 id="44-must"><span class="num">4.4</span> MUST</h3>
+<h4 id="a-obligacion-o-prohibicion-deber-infinitivo-o-un-mandato">A. Obligación o prohibición → <em>deber</em> + infinitivo, o un mandato</h4>
+<ul>
+<li><span class="lang en">EN</span> <em>You must not speak like that!</em></li>
+<li><span class="lang es">ES</span> <em>¡No </em><em>debes</em><em> hablar así!</em> / <em>¡No </em><em>hables</em><em> así!</em></li>
+</ul>
+<p><strong>En carteles y señales:</strong> <em>PROHIBIDO</em> / <em>SE PROHÍBE</em></p>
+<ul>
+<li><span class="lang en">EN</span> <em>Visitors must not feed the animals.</em></li>
+<li><span class="lang es">ES</span> <em><strong>Prohibido echar de comer</strong> a los animales.</em></li>
+</ul>
+<h4 id="b-necesidad-tambien-have-to-tener-que-infinitivo">B. Necesidad (también <em>have to</em>) → <em>tener que</em> + infinitivo</h4>
+<ul>
+<li><span class="lang en">EN</span> <em>I must write to Ann. It's been a long time.</em></li>
+<li><span class="lang es">ES</span> <em><strong>Tengo que</strong> escribir a Ann. Ha pasado mucho tiempo.</em></li>
+</ul>
+<aside class="callout "><p>Atención al <strong>género textual</strong>: un cartel pide <em>Prohibido…</em>; una conversación pide <em>No debes…</em> o un mandato.</p></aside>
+<h3 id="45-need"><span class="num">4.5</span> NEED</h3>
+<ul>
+<li><span class="lang en">EN</span> <em>They need to repair this computer.</em> → <span class="lang es">ES</span> <em>Tienen que arreglar este ordenador.</em></li>
+<li><span class="lang en">EN</span> <em>You need not come tomorrow.</em> → <span class="lang es">ES</span> <em>No tienes que venir mañana.</em></li>
+</ul>
+<p><strong>Otras dos opciones para la negación</strong> (piden subjuntivo):</p>
+<ul>
+<li><strong>No hace falta que</strong> + subjuntivo: <em>No hace falta que </em><em>vengas</em><em> mañana.</em></li>
+<li><strong>No es necesario que</strong> + subjuntivo: <em>No es necesario que </em><em>vengas</em><em> mañana.</em></li>
+</ul>
+<aside class="callout "><p><strong>Fíjate:</strong> <em>No tienes que venir</em> también puede entenderse como falta de obligación; <em>no hace falta que</em> deja más claro que no es necesario.</p></aside>
+<h3 id="46-mapa-de-modales-parte-1"><span class="num">4.6</span> Mapa de modales (parte 1)</h3>
+<p><em>Guárdala en tu banco de recursos como nota de gramática/estrategia.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Modal y función</th>
+<th>En español</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>may/might · posibilidad (pres./fut.)</td>
+<td>quizás/tal vez + subj. · puede que + subj. · a lo mejor + ind.</td>
+<td><em>Quizás esté en su oficina</em></td>
+</tr>
+<tr>
+<td>may/might · posibilidad (pasado)</td>
+<td>quizás + perfecto de subj. · puede que + imperfecto de subj.</td>
+<td><em>Quizás haya dejado la ciudad</em></td>
+</tr>
+<tr>
+<td>may · permiso</td>
+<td>puedo / podría</td>
+<td><em>¿Podría entrar?</em></td>
+</tr>
+<tr>
+<td>can/could · habilidad</td>
+<td>saber, o se omite el modal</td>
+<td><em>Sabe hablar francés</em></td>
+</tr>
+<tr>
+<td>can/could · permiso y capacidad</td>
+<td>poder, o se omite el modal</td>
+<td><em>¿Puedes oírme?</em> / <em>¿Me oyes?</em></td>
+</tr>
+<tr>
+<td>must · obligación/prohibición</td>
+<td>deber + inf. · mandato · prohibido (carteles)</td>
+<td><em>¡No debes hablar así!</em></td>
+</tr>
+<tr>
+<td>must · necesidad</td>
+<td>tener que + infinitivo</td>
+<td><em>Tengo que escribir a Ann</em></td>
+</tr>
+<tr>
+<td>need</td>
+<td>tener que · no hace falta que / no es necesario que + subj.</td>
+<td><em>No hace falta que vengas</em></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="47-practica-modales"><span class="num">4.7</span> Práctica: Modales</h3>
+<p>Traduce cada oración aplicando la estructura adecuada. Si hay varias opciones, escribe al menos dos. Haz las siete antes de ver las respuestas.</p>
+<div class="practice" data-set="p3" data-type="translate"><ol><li><div class="q">He may be at the clinic.</div><textarea data-k="p3:0" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 1"></textarea><div class="ans" hidden><em>Quizás esté en la clínica.</em> / <em>Puede que esté en la clínica.</em> / <em>A lo mejor está en la clínica.</em><span class="why">Posibilidad (presente).</span></div></li><li><div class="q">They might have missed the bus.</div><textarea data-k="p3:1" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 2"></textarea><div class="ans" hidden><em>Quizás hayan perdido el autobús.</em><span class="why">Posibilidad en el pasado.</span></div></li><li><div class="q">May I use your phone?</div><textarea data-k="p3:2" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 3"></textarea><div class="ans" hidden><em>¿Puedo usar su teléfono?</em> / <em>¿Podría usar su teléfono?</em><span class="why">Permiso.</span></div></li><li><div class="q">She can play the piano.</div><textarea data-k="p3:3" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 4"></textarea><div class="ans" hidden><em>Sabe tocar el piano.</em> / <em>Toca el piano.</em><span class="why">Habilidad: <em>saber</em>, o se omite el modal.</span></div></li><li><div class="q">Can you see the board?</div><textarea data-k="p3:4" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 5"></textarea><div class="ans" hidden><em>¿Puedes ver la pizarra?</em> / <em>¿Ves la pizarra?</em><span class="why">Capacidad: <em>poder</em>, o se omite.</span></div></li><li><div class="q">Visitors must not touch the exhibits.</div><textarea data-k="p3:5" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 6"></textarea><div class="ans" hidden><em>Prohibido tocar las piezas expuestas.</em> / <em>Los visitantes no deben tocar…</em><span class="why">Cartel → <em>Prohibido</em>; si no, <em>deber</em> + inf.</span></div></li><li><div class="q">You needn&#x27;t bring anything.</div><textarea data-k="p3:6" rows="2" placeholder="Escribe aquí tu traducción…" aria-label="Tu respuesta a la oración 7"></textarea><div class="ans" hidden><em>No hace falta que traigas nada.</em> / <em>No tienes que traer nada.</em><span class="why">Falta de necesidad.</span></div></li></ol><div class="actions"><button class="btn primary" type="button" data-act="reveal" aria-expanded="false">Ver respuestas</button></div><p class="tip">Escribe primero tus respuestas y después pulsa «Ver respuestas» para autocorregirte.</p></div>
+<h3 id="entregas-2-y-3">ENTREGAS 2 y 3</h3>
+<ul>
+<li><strong>Entrega 2 · Hoja de práctica</strong>: <strong>Parte D</strong> (modales). Sube el doc completo (partes A–D) a Canvas cuando lo tengas.</li>
+<li><strong>Entrega 3 · Banco de recursos (draft):</strong> sube tu documento borrador (draft) del Translation Resources Bank. Consulta las instrucciones y guía en Canvas.</li>
+</ul>
+<footer class="end">SPAN 315 · Introducción a la Traducción · Semana 7 (online) · Prof. Santi Arróniz<br>Versión del 5 de octubre de 2026</footer>
+</main>
+</div>
+<script>
+(function(){
+  var P='span315-s7:';
+  function sget(k){try{return localStorage.getItem(P+k)}catch(e){return null}}
+  function sset(k,v){try{if(v===''||v==null)localStorage.removeItem(P+k);else localStorage.setItem(P+k,v)}catch(e){}}
+
+  /* ---- restore + save textareas, checkboxes ---- */
+  var tas=[].slice.call(document.querySelectorAll('.practice textarea'));
+  tas.forEach(function(t){
+    var v=sget(t.dataset.k); if(v) t.value=v;
+    t.addEventListener('input',function(){sset(t.dataset.k,t.value)});
+  });
+  var cks=[].slice.call(document.querySelectorAll('li.chk input'));
+  cks.forEach(function(c,i){
+    c.dataset.k='chk'+i; if(sget(c.dataset.k)==='1') c.checked=true;
+    c.addEventListener('change',function(){sset(c.dataset.k,c.checked?'1':'')});
+  });
+
+  /* ---- translation practice: show / hide answers ---- */
+  document.querySelectorAll('.practice[data-type="translate"]').forEach(function(p){
+    var b=p.querySelector('[data-act="reveal"]'),anss=p.querySelectorAll('.ans');
+    b.addEventListener('click',function(){
+      var show=anss[0].hidden;
+      anss.forEach(function(a){a.hidden=!show});
+      b.textContent=show?'Ocultar respuestas':'Ver respuestas';
+      b.setAttribute('aria-expanded',show);
+    });
+  });
+
+  /* ---- classify practice ---- */
+  document.querySelectorAll('.practice[data-type="classify"]').forEach(function(p){
+    var id=p.dataset.set, lis=[].slice.call(p.querySelectorAll('ol>li'));
+    lis.forEach(function(li,i){
+      var saved=sget(id+':'+i);
+      li.querySelectorAll('input').forEach(function(r){
+        if(r.value===saved) r.checked=true;
+        r.addEventListener('change',function(){sset(id+':'+i,r.value)});
+      });
+    });
+    function check(){
+      var ok=0,done=0;
+      lis.forEach(function(li){
+        var sel=li.querySelector('input:checked'),fb=li.querySelector('.fb'),right=li.dataset.right,why=li.dataset.why;
+        fb.hidden=false; fb.className='fb';
+        if(!sel){fb.classList.add('bad');fb.innerHTML='Sin responder. La respuesta es <b>'+right+'</b>: '+why;return}
+        done++;
+        if(sel.value===right){ok++;fb.classList.add('ok');fb.innerHTML='✓ <b>Correcto ('+right+').</b> '+why}
+        else{fb.classList.add('bad');fb.innerHTML='✗ Elegiste '+sel.value+'; la respuesta es <b>'+right+'</b>. '+why}
+      });
+      p.querySelector('.score').textContent='Aciertos: '+ok+' de '+lis.length+(done<lis.length?' (hay oraciones sin responder)':'');
+    }
+    p.querySelector('[data-act="check"]').addEventListener('click',check);
+    p.querySelector('[data-act="reset"]').addEventListener('click',function(){
+      lis.forEach(function(li,i){li.querySelectorAll('input').forEach(function(r){r.checked=false});sset(id+':'+i,'');var f=li.querySelector('.fb');f.hidden=true});
+      p.querySelector('.score').textContent='';
+    });
+  });
+
+  /* ---- toolbar ---- */
+  function collect(){
+    var out=['SPAN 315 · Semana 7 · Mis respuestas','Generado: '+new Date().toLocaleString('es-US'),''];
+    document.querySelectorAll('.practice').forEach(function(p){
+      var h=p, title='';
+      while(h&&!title){h=h.previousElementSibling; if(h&&/^H[34]$/.test(h.tagName)) title=h.textContent.trim();}
+      out.push('=== '+title+' ===');
+      p.querySelectorAll('ol>li').forEach(function(li,i){
+        var q=li.querySelector('.q').textContent.trim(),a='';
+        var ta=li.querySelector('textarea'),sel=li.querySelector('input:checked');
+        if(ta) a=ta.value.trim(); else if(sel) a=sel.value;
+        out.push((i+1)+'. '+q); out.push('   Mi respuesta: '+(a||'(sin responder)')); out.push('');
+      });
+    });
+    var cl=[];document.querySelectorAll('li.chk').forEach(function(li){cl.push((li.querySelector('input').checked?'[x] ':'[ ] ')+li.textContent.trim())});
+    if(cl.length){out.push('=== Lista de verificación (Paso 5) ===');out=out.concat(cl)}
+    return out.join('\n');
+  }
+  document.getElementById('btn-dl').addEventListener('click',function(){
+    var blob=new Blob([collect()],{type:'text/plain;charset=utf-8'}),a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);a.download='SPAN315_Semana7_mis_respuestas.txt';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500);
+  });
+  document.getElementById('btn-print').addEventListener('click',function(){window.print()});
+  document.getElementById('btn-clear').addEventListener('click',function(){
+    if(!confirm('¿Borrar todo lo que has escrito y marcado en esta guía? Esta acción no se puede deshacer.'))return;
+    tas.forEach(function(t){t.value='';sset(t.dataset.k,'')});
+    cks.forEach(function(c){c.checked=false;sset(c.dataset.k,'')});
+    document.querySelectorAll('.practice[data-type="classify"] [data-act="reset"]').forEach(function(b){b.click()});
+  });
+
+  /* ---- nav: active section + progress ---- */
+  var side=document.getElementById('side'),tog=document.getElementById('navtoggle');
+  tog.addEventListener('click',function(){var o=side.classList.toggle('open');tog.setAttribute('aria-expanded',o)});
+  side.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){side.classList.remove('open');tog.setAttribute('aria-expanded','false')})});
+  var h2s=[].slice.call(document.querySelectorAll('main h2')),h3s=[].slice.call(document.querySelectorAll('main h3'));
+  function link(id){return side.querySelector('a[href="#'+id+'"]')}
+  function upd(){
+    var y=window.scrollY+120,cur2=null,cur3=null;
+    h2s.forEach(function(h){if(h.offsetTop<=y)cur2=h});
+    h3s.forEach(function(h){if(h.offsetTop<=y)cur3=h});
+    side.querySelectorAll('li.on,li.on2').forEach(function(li){li.classList.remove('on','on2')});
+    if(cur2){var a=link(cur2.id);if(a)a.parentNode.classList.add('on')}
+    if(cur3){var b=link(cur3.id);if(b&&b.parentNode.parentNode.parentNode.tagName==='LI'){b.parentNode.classList.add('on2');}}
+    var d=document.documentElement,max=d.scrollHeight-d.clientHeight;
+    document.getElementById('progress').style.width=(max>0?(window.scrollY/max*100):0)+'%';
+  }
+  window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+})();
+</script>
+</body>
+</html>
