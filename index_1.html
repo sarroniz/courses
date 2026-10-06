@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching · Santi Arróniz</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Materiales de enseñanza del Prof. Santi Arróniz, University of Nevada, Reno.">
+<style>
+:root{
+  --navy:#1e2c59; --ice:#e9eef9; --soft:#f5f7fc; --line:#d3ddf0; --accent:#d9743a; --accent-dk:#b85c28;
+  --muted:#5b6b8c; --bg:#ffffff; --text:#1d2433; --card:#ffffff;
+  --serif:Cambria,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:Calibri,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--navy:#9fb4f0;--ice:#1a2347;--soft:#161d38;--line:#2d3963;--accent:#f08a4b;--accent-dk:#f2a06c;--muted:#a3b0d4;--bg:#0d1226;--text:#e6eaf7;--card:#131a35}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.hero{background:linear-gradient(135deg,#1e2c59 0%,#141d3d 100%);color:#fff;padding:56px 24px 48px}
+.wrap{max-width:860px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#f7b58a;margin-bottom:10px}
+h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 12px}
+.hero p{margin:0;font-size:1.1rem;color:#dbe3fa;max-width:600px}
+main{padding:40px 24px 70px}
+h2{font-family:var(--serif);font-size:1.4rem;color:var(--navy);margin:0 0 16px;padding-bottom:8px;border-bottom:3px solid var(--accent)}
+.cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+a.card{display:block;text-decoration:none;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:20px 22px;transition:border-color .15s,box-shadow .15s,transform .15s}
+a.card:hover,a.card:focus-visible{border-color:var(--accent);box-shadow:0 6px 18px rgba(30,44,89,.12);transform:translateY(-2px);outline:none}
+a.card:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.code{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.08em;background:var(--ice);color:var(--navy);border-radius:6px;padding:2px 9px;margin-bottom:10px}
+.card h3{font-family:var(--serif);font-size:1.25rem;margin:0 0 6px;color:var(--navy);line-height:1.25}
+.card p{margin:0 0 12px;color:var(--muted);font-size:.96rem}
+.go{font-weight:700;font-size:.92rem;color:var(--accent-dk)}
+footer{max-width:860px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Materiales de enseñanza</span>
+  <h1>Teaching</h1>
+  <p>Prof. Santi Arróniz · University of Nevada, Reno</p>
+</div></header>
+<main><div class="wrap">
+  <h2>Cursos</h2>
+  <div class="cards">
+    <a class="card" href="span315/">
+      <span class="code">SPAN 315</span>
+      <h3>Introducción a la Traducción</h3>
+      <p>Guías y materiales semanales del curso. Otoño 2026.</p>
+      <span class="go">Entrar al curso →</span>
+    </a>
+    <!-- Para añadir otro curso, copia el bloque <a class="card"> de arriba y cambia href, código, título y descripción. -->
+  </div>
+</div></main>
+<footer>© Santi Arróniz · Última actualización: octubre de 2026</footer>
+</body>
+</html>
